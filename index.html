@@ -39,9 +39,28 @@
         />
 
         <!-- MyCSS -->
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css" />
     </head>
-    <body>
+    <body class="overflow-hidden">
+        <!-- Music -->
+        <audio src="audio/bgSound.mp3" loop class="music"></audio>
+        <!-- Sfx Door -->
+        <audio src="audio/door.mp3" class="sound-door"></audio>
+
+        <!-- Door Section -->
+        <div id="door-section" class="open" onclick="openDoor()">
+            <h1 class="heading-door left brideFont">Futaro</h1>
+            <h1 class="heading-door right brideFont">Futaru</h1>
+            <div class="doors">
+                <div class="door left">
+                    <img src="door/LeftDoor.png" alt="Left Door" />
+                </div>
+                <div class="door right">
+                    <img src="door/RightDoor.png" alt="Right Door" />
+                </div>
+            </div>
+        </div>
+
         <!-- Jquery3 -->
         <script
             src="https://code.jquery.com/jquery-3.7.1.min.js"
