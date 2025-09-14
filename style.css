@@ -170,3 +170,55 @@ body.transition {
         transform: rotate(360deg);
     }
 }
+
+/* Hero Section */
+#hero-section h1 {
+    font-size: 64px;
+}
+
+#hero-section::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(241, 78, 149, 0.2);
+}
+
+#hero-section {
+    width: 100%;
+    height: 100vh;
+    background:url(bride/handHolder.png);
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    z-index: 2;
+}
+
+#hero-section .container {
+    position: relative;
+}
+
+#hero-section .btn-get-started {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px;
+    transition: 0.5s;
+    color: var(--pink);
+    background: var(--white);
+}
+#hero-section .btn-get-started:hover {
+    background: var(--pink-hover);
+    color: var(--white);
+}
+
+.sparkle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
