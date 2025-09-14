@@ -103,3 +103,70 @@ body.transition {
 .brideFont {
     font-family: "Sacramento", cursive;
 }
+
+
+/* Navbar */
+.nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    list-style-type: none;
+    display: flex;
+    background-color: var(--pink);
+    height: 80px;
+    z-index: 1;
+}
+
+.nav li {
+    flex: 1;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: var(--very-light-grey);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    z-index: 1;
+    position: relative;
+}
+
+.nav li a:hover {
+    color: var(--white);
+}
+
+.nav li a.nav-item-music {
+    transform: translateY(-20%);
+    font-size: 30px;
+    top: -30px;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav .nav-music {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: var(--dark);
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav li a.rotate {
+    animation: rotateAnimation 5s linear infinite;
+} 
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
