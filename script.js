@@ -1,3 +1,6 @@
+//AOS
+AOS.init()
+
 // Music
 var tempMusic = "";
 song = document.querySelector(".music");
@@ -86,7 +89,7 @@ var x = setInterval(function () {
 
 // Nama Sambutan
 const urlParams = new URLSearchParams(window.location.search)
-const panggilan = urlParams.get('p')
-const nama = urlParams.get('n')
+const panggilan = urlParams.get('p') || "";
+const nama = urlParams.get('n') || "Mr./Mrs./Brother/Sister"
 const namaSambutan = document.querySelector('#nama-sambutan')
 namaSambutan.innerText = `${panggilan} ${nama}`

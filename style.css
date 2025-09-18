@@ -2,6 +2,7 @@
     --pink: #f14e95;
     --pink-muted: #fdf4f8;
     --pink-hover: #d84686;
+    --pink-light: #fcdbe9;
     --white: #fff;
     --gray: #ccc;
     --light-grey: #d4d4d4;
@@ -96,14 +97,13 @@ body.transition {
     left: 0;
 }
 
-.heading-door.right{
+.heading-door.right {
     right: 0;
 }
 
 .brideFont {
     font-family: "Sacramento", cursive;
 }
-
 
 /* Navbar */
 .nav {
@@ -160,7 +160,7 @@ body.transition {
 
 .nav li a.rotate {
     animation: rotateAnimation 5s linear infinite;
-} 
+}
 
 @keyframes rotateAnimation {
     from {
@@ -189,7 +189,7 @@ body.transition {
 #hero-section {
     width: 100%;
     height: 100vh;
-    background:url(bride/handHolder.png);
+    background: url(bride/handHolder.png);
     background-size: cover;
     position: relative;
     background-position: center;
@@ -221,4 +221,79 @@ body.transition {
     position: absolute;
     width: 100%;
     height: 100%;
+}
+
+.text-pink {
+    color: var(--pink);
+}
+
+.pembuka-section {
+    padding-top: 75px;
+}
+
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.section-title h3 {
+    margin: 15px 0 0 0;
+    font-size: 32px;
+}
+
+.section-title p {
+    margin: 15px auto 0 auto;
+}
+
+.section-bg {
+    background-color: var(--pink-muted);
+}
+
+#content-section {
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--pink-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--pink);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--pink-hover);
+}
+
+.card-acara {
+    width: calc(50% - 10px);
+}
+
+@media (max-width: 992px) {
+    .card-acara {
+        width: calc(100% - 10px);
+    }
+}
+
+.btn-pink {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: var(--white);
+    background: var(--pink);
+}
+
+.btn-pink:hover{
+    background-color: var(--pink-hover);
+    color: var(--white);
 }
