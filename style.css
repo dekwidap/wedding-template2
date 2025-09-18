@@ -297,3 +297,10 @@ body.transition {
     background-color: var(--pink-hover);
     color: var(--white);
 }
+
+
+/* Location Maps */
+.border-pink {
+    border-radius: 15px;
+    border: 2px solid var(--pink);
+}
