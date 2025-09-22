@@ -116,5 +116,61 @@ function copyText(el) {
 
     setTimeout(() => {
         jQuery(el).html(`<i class="fas fa-regular fa-copy"></i> Copy`);
-    }, 2000);
+    }, 1500);
 }
+
+// RSVP
+window.addEventListener("load", function () {
+    const form = this.document.getElementById("rsvp-form");
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const status = document.getElementById("status").value;
+        const nama = document.getElementById("nama").value.trim();
+
+        if (nama === "") {
+            Swal.fire({
+                icon: "error",
+                text: "Nama Harus Diisi!",
+            });
+            return;
+        }
+
+        if (status == "0") {
+            Swal.fire({
+                icon: "error",
+                text: "Pilih Salah Satu Status!",
+            });
+            return;
+        }
+
+        const data = new FormData(form);
+        const action = e.target.action;
+        const input = form.querySelectorAll("input, select, button");
+
+        input.forEach((input) => {
+            input.disable = true;
+        });
+        fetch(action, {
+            method: "POST",
+            body: data,
+        })
+            .then(() => {
+                Swal.fire({
+                    icon: "success",
+                    text: "Konfirmasi kehadiran anda berhasil terkirim!",
+                });
+            })
+            .catch((error) => {
+                Swal.fire({
+                    icon: "error",
+                    text: error,
+                });
+            })
+            .finally(() => {
+                input.forEach((input) => {
+                    input.disable = false;
+                });
+            });
+    });
+});

@@ -764,6 +764,98 @@
             </div>
         </section>
 
+        <!-- RSVP Section -->
+        <section id="rsvp-section" class="rsvp-section section-bg py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="section-title text-center">
+                            <h1 class="text-pink brideFont fw-bold">RSVP</h1>
+                            <p>
+                                Isi Form dibawah ini untuk melakukan konfirmasi
+                                kehadiran Anda
+                            </p>
+                        </div>
+                        <form
+                            action="https://script.google.com/macros/s/AKfycbzSs8mTzEUpgYawAvYFqkDDs7-zezBgVGTqyvBUeyrlWNCjc3STlK532XwpC2LtlKbWmg/exec"
+                            method="POST"
+                            id="rsvp-form"
+                            class="row row-cols-md-auto g-3 align-items-center justify-content-center"
+                        >
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="nama">Nama</label>
+                                    <input
+                                        type="text"
+                                        id="nama"
+                                        name="nama"
+                                        class="form-control"
+                                        required
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="jumlah">Jumlah</label>
+                                    <input
+                                        type="number"
+                                        id="jumlah"
+                                        name="jumlah"
+                                        class="form-control"
+                                        required
+                                        min="1"
+                                        max="5"
+                                        length="1"
+                                        value="1"
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="status">Status</label>
+                                    <select
+                                        name="status"
+                                        id="status"
+                                        class="form-select"
+                                        required
+                                    >
+                                        <option value="0">
+                                            ---Pilih Salah Satu---
+                                        </option>
+                                        <option value="Hadir">Hadir</option>
+                                        <option value="Tidak Hadir">
+                                            Tidak Hadir
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <div class="mt-3">
+                                    <button type="submit" class="btn btn-kirim">
+                                        <i class="fas fa-fw fa-paper-plane"></i>
+                                        Kirim
+                                    </button>
+                                </div>
+                            </div>
+
+                                                    <a
+                            href="https://docs.google.com/spreadsheets/d/1zRuW3hfOffcU3YRg4km3ro0R-Hkh52NXihGKW31ABiI/edit?usp=sharing"
+                            target="_blank"
+                            class="btn btn-lg btn-pink rounded-pill mb-4"
+                        >
+                            Klik Disini Jika kamu ingin melihat Form Sheets
+                            nya</a
+                        >
+                        </form>
+
+                        <div class="row mt-5">
+                            <div class="col-lg-12"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Jquery3 -->
         <script
             src="https://code.jquery.com/jquery-3.7.1.min.js"
