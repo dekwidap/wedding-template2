@@ -15,7 +15,13 @@
             crossorigin="anonymous"
         />
         <!-- Lightbox 2 CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css" integrity="sha512-xtV3HfYNbQXS/1R1jP53KbFcU9WXiSA1RFKzl5hRlJgdOJm4OxHCWYpskm6lN0xp0XtKGpAfVShpbvlFH3MDAA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css"
+            integrity="sha512-xtV3HfYNbQXS/1R1jP53KbFcU9WXiSA1RFKzl5hRlJgdOJm4OxHCWYpskm6lN0xp0XtKGpAfVShpbvlFH3MDAA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
 
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -651,7 +657,108 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-12 text-center">
-                        <iframe class="border-pink" width="100%" height="500" src="https://www.youtube.com/embed/BYEXCPFfoPM?si=KrF8Z4pqdyREzwNA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe
+                            class="border-pink"
+                            width="100%"
+                            height="500"
+                            src="https://www.youtube.com/embed/BYEXCPFfoPM?si=KrF8Z4pqdyREzwNA"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gift Section -->
+        <section id="gift-section" class="gift-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="section-title">
+                            <h1 class="brideFont text-pink fw-bold">
+                                Wedding Gift
+                            </h1>
+                            <p>
+                                Bagi Bapak dan Ibu yang ingin mengirimkan
+                                hadiah, dapat melalui account atau e-wallet
+                                dibawah ini
+                            </p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 text-center">
+                                <button
+                                    type="button"
+                                    class="text-center btn btn-lg btn-pink mb-4 rounded-pill"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseHadiah"
+                                >
+                                    <i class="fas fa-fw fa-gift"></i>Kirim
+                                    Hadiah
+                                </button>
+                                <div class="collapse" id="collapseHadiah">
+                                    <div
+                                        class="my-4 mx-auto position-relative credit-card"
+                                    >
+                                        <img
+                                            src="img/bca-logo.png"
+                                            alt="BCA"
+                                            class="card-logo"
+                                        />
+                                        <div class="card-container">
+                                            <img
+                                                src="img/chip-card.png"
+                                                alt="Chip Card"
+                                                class="card-sim"
+                                            />
+                                            <div class="card-number">
+                                                1234 567 890
+                                            </div>
+                                        </div>
+                                        <div class="card-name mt-2">Futaro</div>
+                                        <a
+                                            style="cursor: pointer"
+                                            onclick="copyText(this)"
+                                            class="copy-button btn btn-light mt-3"
+                                        >
+                                            <i class="fas fa-fw fa-copy"></i>
+                                            Copy
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="my-4 mx-auto position-relative credit-card"
+                                    >
+                                        <img
+                                            src="img/bni-logo.jpg"
+                                            alt="BNI"
+                                            class="card-logo"
+                                        />
+                                        <div class="card-container">
+                                            <img
+                                                src="img/chip-card.png"
+                                                alt="Chip Card"
+                                                class="card-sim"
+                                            />
+                                            <div class="card-number">
+                                                567 890 1234
+                                            </div>
+                                        </div>
+                                        <div class="card-name mt-2">Futari</div>
+                                        <a
+                                            style="cursor: pointer"
+                                            onclick="copyText(this)"
+                                            class="copy-button btn btn-light mt-3"
+                                        >
+                                            <i class="fas fa-fw fa-copy"></i>
+                                            Copy
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

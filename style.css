@@ -481,3 +481,60 @@ body.transition {
         right: auto;
     }
 }
+
+/* Gift Card */
+.credit-card {
+    background-color: var(--dark);
+    background-size: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 300px;
+    color: var(--white);
+    position: absolute;
+}
+
+.card-logo {
+    width: 75px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.card-sim {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.card-number {
+    font-family: "Courier New", monospace;
+    font-size: 22px;
+}
+
+.card-name {
+    font-family: "Courier New", monospace;
+    font-size: 16px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.copy-button {
+    font-family: "Courier New", monospace;
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    background-color: var(--white);
+    color: var(--black);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}

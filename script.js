@@ -1,5 +1,5 @@
 //AOS
-AOS.init()
+AOS.init();
 
 // Music
 var tempMusic = "";
@@ -80,16 +80,41 @@ var x = setInterval(function () {
         <div class="col-lg-1 col-3"><div class="text-center p-2 rounded text-light"><h5>${seconds}</h5> Detik</div></div>
     `;
 
-
-    if(distance < 0) {
-        clearInterval(x)
-        document.getElementById('countdown-wedding').innerHTML = "<span class='text-center p-3 rounded text-light m-2'><h2>Already Started</h2></span>"
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown-wedding").innerHTML =
+            "<span class='text-center p-3 rounded text-light m-2'><h2>Already Started</h2></span>";
     }
 }, 1000);
 
 // Nama Sambutan
-const urlParams = new URLSearchParams(window.location.search)
-const panggilan = urlParams.get('p') || "";
-const nama = urlParams.get('n') || "Mr./Mrs./Brother/Sister"
-const namaSambutan = document.querySelector('#nama-sambutan')
-namaSambutan.innerText = `${panggilan} ${nama}`
+const urlParams = new URLSearchParams(window.location.search);
+const panggilan = urlParams.get("p") || "";
+const nama = urlParams.get("n") || "Mr./Mrs./Brother/Sister";
+const namaSambutan = document.querySelector("#nama-sambutan");
+namaSambutan.innerText = `${panggilan} ${nama}`;
+
+// Copy Text
+function copyText(el) {
+    var content = jQuery(el)
+        .siblings("div.card-container")
+        .find("div.card-number")
+        .text()
+        .trim();
+    var temp = document.createElement("textarea");
+
+    document.body.appendChild(temp);
+
+    temp.value = content.replace(/\s+/g, "");
+    temp.select();
+
+    document.execCommand("Copy");
+
+    document.body.removeChild(temp);
+
+    jQuery(el).text("Berhasil di Copy");
+
+    setTimeout(() => {
+        jQuery(el).html(`<i class="fas fa-regular fa-copy"></i> Copy`);
+    }, 2000);
+}
