@@ -7,6 +7,7 @@ song = document.querySelector(".music");
 if (tempMusic) {
     song.src = tempMusic;
 }
+song.volume = 0.5; // nilai antara 0.0 - 1.0
 
 // Door Start
 function openDoor() {
@@ -62,7 +63,7 @@ function toogleMusic(event) {
 }
 
 // Countdown
-var countdownDate = new Date("Sep, 27, 2025 10:00:00").getTime();
+var countdownDate = new Date("Sep, 27, 2026 10:00:00").getTime();
 var x = setInterval(function () {
     var now = new Date().getTime();
     var distance = countdownDate - now;
@@ -171,6 +172,31 @@ window.addEventListener("load", function () {
                 input.forEach((input) => {
                     input.disable = false;
                 });
+            });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const button = document.querySelector(".btn-get-started");
+    const music = document.getElementById("bg-music");
+
+    button.addEventListener("click", function () {
+        music.volume = 0; // mulai dari pelan
+        music
+            .play()
+            .then(() => {
+                let vol = 0;
+                const fade = setInterval(() => {
+                    if (vol < 1) {
+                        vol += 0.05;
+                        music.volume = vol;
+                    } else {
+                        clearInterval(fade);
+                    }
+                }, 100); // fade-in selama ~2 detik
+            })
+            .catch((error) => {
+                console.log("Playback failed:", error);
             });
     });
 });

@@ -49,25 +49,15 @@
         <!-- MyCSS -->
         <link rel="stylesheet" href="style.css" />
     </head>
-    <body class="overflow-hidden">
+    <body>
         <!-- Music -->
-        <audio src="audio/bgSound.mp3" loop class="music"></audio>
-        <!-- Sfx Door -->
-        <audio src="audio/door.mp3" class="sound-door"></audio>
-
-        <!-- Door Section -->
-        <div id="door-section" class="open" onclick="openDoor()">
-            <h1 class="heading-door left brideFont">Futaro</h1>
-            <h1 class="heading-door right brideFont">Futaru</h1>
-            <div class="doors">
-                <div class="door left">
-                    <img src="door/LeftDoor.png" alt="Left Door" />
-                </div>
-                <div class="door right">
-                    <img src="door/RightDoor.png" alt="Right Door" />
-                </div>
-            </div>
-        </div>
+        <audio
+            id="bg-music"
+            src="audio/bgSound.mp3"
+            loop
+            preload="auto"
+            class="music"
+        ></audio>
 
         <!-- Content Section -->
         <div id="content-section">
@@ -115,746 +105,824 @@
                     </a>
                 </li>
             </ul>
-        </div>
 
-        <!-- Hero Section -->
-        <section id="hero-section" class="d-flex align-items-center">
-            <img src="img/sparkle.gif" alt="sparkle" class="sparkle" />
-            <div class="container text-center">
-                <h4 class="my-2 text-white">
-                    To <span id="nama-sambutan"></span>
-                </h4>
-                <h1 class="my-2 text-white brideFont">Futaro & Futari</h1>
-                <h4 class="my-2-text-white">Will be Married</h4>
-                <h4 class="my-2 text-white fw-bold">
-                    Saturday, 27 September 2025
-                </h4>
+            <!-- Hero Section -->
+            <section id="hero-section" class="d-flex align-items-center">
+                <img src="img/sparkle.gif" alt="sparkle" class="sparkle" />
+                <div class="container text-center">
+                    <h4 class="my-2 text-white">
+                        To <span id="nama-sambutan"></span>
+                    </h4>
+                    <h1 class="my-2 text-white brideFont">Futaro & Futari</h1>
+                    <h4 class="my-2-text-white">Will be Married</h4>
+                    <h4 class="my-2 text-white fw-bold">
+                        Saturday, 27 September 2025
+                    </h4>
+                    <div
+                        class="row my-3 d-flex justify-content-center"
+                        id="countdown-wedding"
+                    >
+                        <div class="col-lg-1 col-3">
+                            <div class="text-center p-2 rounded text-light">
+                                <h5>0</h5>
+                                Hari
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-3">
+                            <div class="text-center p-2 rounded text-light">
+                                <h5>0</h5>
+                                Jam
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-3">
+                            <div class="text-center p-2 rounded text-light">
+                                <h5>0</h5>
+                                Menit
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-3">
+                            <div class="text-center p-2 rounded text-light">
+                                <h5>0</h5>
+                                Detik
+                            </div>
+                        </div>
+                    </div>
+                    <a
+                        href="#pembuka-section"
+                        class="rounded-pill text-decoration-none btn btn-lg btn-get-started py-3"
+                        ><i class="fas fas-fw fa-envelope-open-text"></i> Open
+                        the Invivation</a
+                    >
+                </div>
+            </section>
+
+            <!-- Pembuka Section -->
+            <section
+                id="pembuka-section"
+                class="pembuka-section section-bg py-5"
+            >
                 <div
-                    class="row my-3 d-flex justify-content-center"
-                    id="countdown-wedding"
+                    class="container"
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500"
                 >
-                    <div class="col-lg-1 col-3">
-                        <div class="text-center p-2 rounded text-light">
-                            <h5>0</h5>
-                            Hari
-                        </div>
-                    </div>
-                    <div class="col-lg-1 col-3">
-                        <div class="text-center p-2 rounded text-light">
-                            <h5>0</h5>
-                            Jam
-                        </div>
-                    </div>
-                    <div class="col-lg-1 col-3">
-                        <div class="text-center p-2 rounded text-light">
-                            <h5>0</h5>
-                            Menit
-                        </div>
-                    </div>
-                    <div class="col-lg-1 col-3">
-                        <div class="text-center p-2 rounded text-light">
-                            <h5>0</h5>
-                            Detik
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="section-title text-center">
+                                <h1 class="text-pink brideFont fw-bold">
+                                    Hello Everyone
+                                </h1>
+                                <h3>We want to Announcement</h3>
+                                <p>We will be Married!</p>
+                                <p>
+                                    We hope you guys will coming in this wedding
+                                    ceremony
+                                </p>
+                            </div>
+
+                            <div class="row my-4 justify-content-center">
+                                <div
+                                    class="col-lg-8"
+                                    data-aos="fade-up"
+                                    data-aos-easing="linear"
+                                    data-aos-duration="1500"
+                                >
+                                    <img
+                                        src="bride/Chapter3.png"
+                                        alt="Wedding"
+                                        class="img-fluid rounded-pill"
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="row my-3 justify-content-between">
+                                <div
+                                    class="col rounded"
+                                    data-aos="fade-right"
+                                    data-aos-easing="linear"
+                                    data-aos-duration="1500"
+                                >
+                                    <div class="p2 pt-3 text-center">
+                                        <h1 class="text-center brideFont">
+                                            Futaro
+                                        </h1>
+                                        <p>Son from Father Lorem, ipsum.</p>
+                                        <p>Mother Lorem, ipsum dolor.</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-sm-1 my-auto"
+                                    data-aos="fade-down"
+                                    data-aos-easing="linear"
+                                    data-aos-duration="1500"
+                                >
+                                    <h1 class="text-center brideFont">&</h1>
+                                </div>
+                                <div
+                                    class="col rounded"
+                                    data-aos="fade-left"
+                                    data-aos-easing="linear"
+                                    data-aos-duration="1500"
+                                >
+                                    <div class="p2 pt-3 text-center">
+                                        <h1 class="text-center brideFont">
+                                            Futari
+                                        </h1>
+                                        <p>
+                                            Daugther from Father Lorem, ipsum.
+                                        </p>
+                                        <p>Mother Lorem, ipsum dolor.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <a
-                    href="#pembuka-section"
-                    class="rounded-pill text-decoration-none btn btn-lg btn-get-started py-3"
-                    ><i class="fas fas-fw fa-envelope-open-text"></i> Open the
-                    Invivation</a
+            </section>
+
+            <section id="acara-section" class="acara-section py-5 mb-5">
+                <div
+                    class="container"
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500"
                 >
-            </div>
-        </section>
-
-        <!-- Pembuka Section -->
-        <section id="pembuka-section" class="pembuka-section section-bg py-5">
-            <div
-                class="container"
-                data-aos="fade-up"
-                data-aos-easing="linear"
-                data-aos-duration="1500"
-            >
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="section-title text-center">
-                            <h1 class="text-pink brideFont fw-bold">
-                                Hello Everyone
-                            </h1>
-                            <h3>We want to Announcement</h3>
-                            <p>We will be Married!</p>
-                            <p>
-                                We hope you guys will coming in this wedding
-                                ceremony
-                            </p>
-                        </div>
-
-                        <div class="row my-4 justify-content-center">
-                            <div
-                                class="col-lg-8"
-                                data-aos="fade-up"
-                                data-aos-easing="linear"
-                                data-aos-duration="1500"
-                            >
-                                <img
-                                    src="bride/Chapter3.png"
-                                    alt="Wedding"
-                                    class="img-fluid rounded-pill"
-                                />
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="section-title">
+                                <h1 class="text-pink brideFont fw-bold">
+                                    Wedding Ceremony
+                                </h1>
+                                <p>
+                                    Merupakan Lorem ipsum, dolor sit amet
+                                    consectetur adipisicing elit. Et, aspernatur
+                                    excepturi ex soluta animi ullam.
+                                </p>
                             </div>
                         </div>
 
-                        <div class="row my-3 justify-content-between">
+                        <div
+                            class="row justify-content-between px-3 text-center"
+                        >
                             <div
-                                class="col rounded"
+                                class="col-lg-6 border my-2 rounded p-3 card-acara"
                                 data-aos="fade-right"
                                 data-aos-easing="linear"
                                 data-aos-duration="1500"
                             >
-                                <div class="p2 pt-3 text-center">
-                                    <h1 class="text-center brideFont">
-                                        Futaro
-                                    </h1>
-                                    <p>Son from Father Lorem, ipsum.</p>
-                                    <p>Mother Lorem, ipsum dolor.</p>
-                                </div>
+                                <h4>Akad Nikah</h4>
+                                <hr />
+                                <p>
+                                    <i class="fas fa-fw fa-calendar-day"></i>27
+                                    September 2025
+                                </p>
+                                <p>
+                                    <i class="fas fa-fw fa-clock"></i>12.00 -
+                                    21.00 WITA
+                                </p>
+                                <p>
+                                    <i class="fas fa-fw fa-location-dot"></i>Our
+                                    Sweet Home
+                                </p>
+                                <a
+                                    href="https://www.google.com/calendar/render?action=TEMPLATE&text=Wedding+Ceremony&details=Wedding+Ceremony+of+Futaro+and+Futari&location=Our+Sweet+Home&dates=20250927T040000Z%2F20250927T130000Z"
+                                    class="btn btn-lg btn-pink rounded-fill"
+                                    target="_blank"
+                                >
+                                    <i class="fas fa-fw fa-calendar-day"></i
+                                    >Save to Your Calender
+                                </a>
                             </div>
                             <div
-                                class="col-sm-1 my-auto"
-                                data-aos="fade-down"
-                                data-aos-easing="linear"
-                                data-aos-duration="1500"
-                            >
-                                <h1 class="text-center brideFont">&</h1>
-                            </div>
-                            <div
-                                class="col rounded"
+                                class="col-lg-6 border my-2 rounded p-3 card-acara"
                                 data-aos="fade-left"
                                 data-aos-easing="linear"
                                 data-aos-duration="1500"
                             >
-                                <div class="p2 pt-3 text-center">
-                                    <h1 class="text-center brideFont">
-                                        Futari
-                                    </h1>
-                                    <p>Daugther from Father Lorem, ipsum.</p>
-                                    <p>Mother Lorem, ipsum dolor.</p>
+                                <h4>Resepsi Nikah</h4>
+                                <hr />
+                                <p>
+                                    <i class="fas fa-fw fa-calendar-day"></i>27
+                                    September 2025
+                                </p>
+                                <p>
+                                    <i class="fas fa-fw fa-clock"></i>10.00 -
+                                    21.00 WITA
+                                </p>
+                                <p>
+                                    <i class="fas fa-fw fa-location-dot"></i>Our
+                                    Sweet Home
+                                </p>
+                                <a
+                                    href="https://www.google.com/calendar/render?action=TEMPLATE&text=Reception+Ceremony&details=Wedding+Ceremony+of+Futaro+and+Futari&location=Our+Sweet+Home&dates=20250927T040000Z%2F20250927T130000Z"
+                                    class="btn btn-lg btn-pink rounded-fill"
+                                    target="_blank"
+                                >
+                                    <i class="fas fa-fw fa-calendar-day"></i
+                                    >Save to Your Calender
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Location -->
+            <section id="lokasi-section" class="lokasi-section py-5 section-bg">
+                <div
+                    class="container"
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500"
+                >
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="section-title">
+                                <h1 class="text-pink brideFont fw-bold">
+                                    Location Wedding Ceremony
+                                </h1>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-12 text-center">
+                                    <a
+                                        href="https://maps.app.goo.gl/5awDFq41DrDwrN4a6"
+                                        target="_blank"
+                                        class="btn btn-lg btn-pink rounded-pill mb-4"
+                                    >
+                                        <i
+                                            class="fas fa-fw fa-location-dot"
+                                        ></i>
+                                        Open in Google Maps</a
+                                    >
+                                    <div class="map-responsive">
+                                        <iframe
+                                            class="mb-4 mb-lg-0 border-pink"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.209323456929!2d115.23391660000001!3d-8.6716335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd240f5b0baad2f%3A0xf67150ab4e009a2c!2sBajra%20Sandhi%20Monument!5e0!3m2!1sen!2sid!4v1758186033247!5m2!1sen!2sid"
+                                            width="600"
+                                            height="450"
+                                            allowfullscreen=""
+                                            loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"
+                                        ></iframe>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="acara-section" class="acara-section py-5 mb-5">
-            <div
-                class="container"
-                data-aos="fade-up"
-                data-aos-easing="linear"
-                data-aos-duration="1500"
-            >
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="section-title">
-                            <h1 class="text-pink brideFont fw-bold">
-                                Wedding Ceremony
-                            </h1>
-                            <p>
-                                Merupakan Lorem ipsum, dolor sit amet
-                                consectetur adipisicing elit. Et, aspernatur
-                                excepturi ex soluta animi ullam.
-                            </p>
-                        </div>
+            <!-- Love Story Section -->
+            <section id="love-story-section" class="love-story-section py-5">
+                <div
+                    class="container"
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500"
+                >
+                    <div class="section-title">
+                        <h1 class="text-pink brideFont fw-bold">Love Story</h1>
                     </div>
-
-                    <div class="row justify-content-between px-3 text-center">
-                        <div
-                            class="col-lg-6 border my-2 rounded p-3 card-acara"
-                            data-aos="fade-right"
-                            data-aos-easing="linear"
-                            data-aos-duration="1500"
-                        >
-                            <h4>Akad Nikah</h4>
-                            <hr />
-                            <p>
-                                <i class="fas fa-fw fa-calendar-day"></i>27
-                                September 2025
-                            </p>
-                            <p>
-                                <i class="fas fa-fw fa-clock"></i>12.00 - 21.00
-                                WITA
-                            </p>
-                            <p>
-                                <i class="fas fa-fw fa-location-dot"></i>Our
-                                Sweet Home
-                            </p>
-                            <a
-                                href="https://www.google.com/calendar/render?action=TEMPLATE&text=Wedding+Ceremony&details=Wedding+Ceremony+of+Futaro+and+Futari&location=Our+Sweet+Home&dates=20250927T040000Z%2F20250927T130000Z"
-                                class="btn btn-lg btn-pink rounded-fill"
-                                target="_blank"
-                            >
-                                <i class="fas fa-fw fa-calendar-day"></i>Save to
-                                Your Calender
-                            </a>
-                        </div>
-                        <div
-                            class="col-lg-6 border my-2 rounded p-3 card-acara"
-                            data-aos="fade-left"
-                            data-aos-easing="linear"
-                            data-aos-duration="1500"
-                        >
-                            <h4>Resepsi Nikah</h4>
-                            <hr />
-                            <p>
-                                <i class="fas fa-fw fa-calendar-day"></i>27
-                                September 2025
-                            </p>
-                            <p>
-                                <i class="fas fa-fw fa-clock"></i>10.00 - 21.00
-                                WITA
-                            </p>
-                            <p>
-                                <i class="fas fa-fw fa-location-dot"></i>Our
-                                Sweet Home
-                            </p>
-                            <a
-                                href="https://www.google.com/calendar/render?action=TEMPLATE&text=Reception+Ceremony&details=Wedding+Ceremony+of+Futaro+and+Futari&location=Our+Sweet+Home&dates=20250927T040000Z%2F20250927T130000Z"
-                                class="btn btn-lg btn-pink rounded-fill"
-                                target="_blank"
-                            >
-                                <i class="fas fa-fw fa-calendar-day"></i>Save to
-                                Your Calender
-                            </a>
+                    <div class="row justify-content-center">
+                        <div class="col-lg">
+                            <ul class="timeline">
+                                <li
+                                    data-aos="fade-right"
+                                    data-aos-easing="linear"
+                                    data-aos-duration="1500"
+                                >
+                                    <div
+                                        class="timeline-badge"
+                                        style="
+                                            background-image: url('bride/Chapter1.png');
+                                        "
+                                    ></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h3 class="timeline-title">
+                                                First Meet
+                                            </h3>
+                                            <span class="timeline-date"
+                                                >15 Mei 2023</span
+                                            >
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>
+                                                Di Sebuah Cerita ini Lorem ipsum
+                                                dolor sit, amet consectetur
+                                                adipisicing elit. Impedit
+                                                accusantium nesciunt facere
+                                                veniam! Corporis, assumenda.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- Cerita 2 -->
+                                <li
+                                    class="timeline-inverted"
+                                    data-aos="fade-left"
+                                    data-aos-easing="linear"
+                                    data-aos-duration="1500"
+                                >
+                                    <div
+                                        class="timeline-badge"
+                                        style="
+                                            background-image: url('bride/Chapter2.png');
+                                        "
+                                    ></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h3 class="timeline-title">
+                                                Second Meet
+                                            </h3>
+                                            <span class="timeline-date"
+                                                >29 Mei 2023</span
+                                            >
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>
+                                                Di Sebuah Cerita ini Lorem ipsum
+                                                dolor sit, amet consectetur
+                                                adipisicing elit. Impedit
+                                                accusantium nesciunt facere
+                                                veniam! Corporis, assumenda.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li
+                                    data-aos="fade-right"
+                                    data-aos-easing="linear"
+                                    data-aos-duration="1500"
+                                >
+                                    <div
+                                        class="timeline-badge"
+                                        style="
+                                            background-image: url('bride/Chapter3.png');
+                                        "
+                                    ></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h3 class="timeline-title">
+                                                Third Meet
+                                            </h3>
+                                            <span class="timeline-date"
+                                                >15 Mei 2023</span
+                                            >
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>
+                                                Di Sebuah Cerita ini Lorem ipsum
+                                                dolor sit, amet consectetur
+                                                adipisicing elit. Impedit
+                                                accusantium nesciunt facere
+                                                veniam! Corporis, assumenda.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li
+                                    class="timeline-inverted"
+                                    data-aos="fade-left"
+                                    data-aos-easing="linear"
+                                    data-aos-duration="1500"
+                                >
+                                    <div
+                                        class="timeline-badge"
+                                        style="
+                                            background-image: url('bride/Chapter1.png');
+                                        "
+                                    ></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h3 class="timeline-title">
+                                                Lovely Meet
+                                            </h3>
+                                            <span class="timeline-date"
+                                                >19 Juli 2023</span
+                                            >
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>
+                                                Di Sebuah Cerita ini Lorem ipsum
+                                                dolor sit, amet consectetur
+                                                adipisicing elit. Impedit
+                                                accusantium nesciunt facere
+                                                veniam! Corporis, assumenda.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li
+                                    data-aos="fade-right"
+                                    data-aos-easing="linear"
+                                    data-aos-duration="1500"
+                                >
+                                    <div
+                                        class="timeline-badge"
+                                        style="
+                                            background-image: url('bride/Chapter2.png');
+                                        "
+                                    ></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h3 class="timeline-title">
+                                                Third Meet
+                                            </h3>
+                                            <span class="timeline-date"
+                                                >15 Mei 2023</span
+                                            >
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>
+                                                Di Sebuah Cerita ini Lorem ipsum
+                                                dolor sit, amet consectetur
+                                                adipisicing elit. Impedit
+                                                accusantium nesciunt facere
+                                                veniam! Corporis, assumenda.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Section Location -->
-        <section id="lokasi-section" class="lokasi-section py-5 section-bg">
-            <div
-                class="container"
-                data-aos="fade-up"
-                data-aos-easing="linear"
-                data-aos-duration="1500"
+            <!-- Gallery Section -->
+            <section
+                id="gallery-section"
+                class="gallery-section py-4 section-bg"
             >
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="section-title">
-                            <h1 class="text-pink brideFont fw-bold">
-                                Location Wedding Ceremony
-                            </h1>
+                <div
+                    class="container"
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500"
+                >
+                    <div class="section-title">
+                        <h1 class="brideFont text-pink fw-bold">Gallery</h1>
+                    </div>
+                    <div class="row" data-masonry="{'percentPosition': true}">
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <a
+                                href="bride/gallery/g1.png"
+                                data-lightbox="Our Gallery"
+                                class="text-decoration-none"
+                            >
+                                <img
+                                    src="bride/gallery/g1.png"
+                                    alt="Our Gallery"
+                                    class="card-img border-pink"
+                                />
+                            </a>
                         </div>
-                        <div class="row justify-content-center">
-                            <div class="col-lg-12 text-center">
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <a
+                                href="bride/gallery/g2.png"
+                                data-lightbox="Our Gallery"
+                                class="text-decoration-none"
+                            >
+                                <img
+                                    src="bride/gallery/g2.png"
+                                    alt="Our Gallery"
+                                    class="card-img border-pink"
+                                />
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <a
+                                href="bride/gallery/g3.png"
+                                data-lightbox="Our Gallery"
+                                class="text-decoration-none"
+                            >
+                                <img
+                                    src="bride/gallery/g3.png"
+                                    alt="Our Gallery"
+                                    class="card-img border-pink"
+                                />
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <a
+                                href="bride/gallery/g4.png"
+                                data-lightbox="Our Gallery"
+                                class="text-decoration-none"
+                            >
+                                <img
+                                    src="bride/gallery/g4.png"
+                                    alt="Our Gallery"
+                                    class="card-img border-pink"
+                                />
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <a
+                                href="bride/gallery/g5.png"
+                                data-lightbox="Our Gallery"
+                                class="text-decoration-none"
+                            >
+                                <img
+                                    src="bride/gallery/g5.png"
+                                    alt="Our Gallery"
+                                    class="card-img border-pink"
+                                />
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <a
+                                href="bride/gallery/g6.png"
+                                data-lightbox="Our Gallery"
+                                class="text-decoration-none"
+                            >
+                                <img
+                                    src="bride/gallery/g6.png"
+                                    alt="Our Gallery"
+                                    class="card-img border-pink"
+                                />
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <a
+                                href="bride/gallery/g7.png"
+                                data-lightbox="Our Gallery"
+                                class="text-decoration-none"
+                            >
+                                <img
+                                    src="bride/gallery/g7.png"
+                                    alt="Our Gallery"
+                                    class="card-img border-pink"
+                                />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12 text-center">
+                            <iframe
+                                class="border-pink"
+                                width="100%"
+                                height="500"
+                                src="https://www.youtube.com/embed/BYEXCPFfoPM?si=KrF8Z4pqdyREzwNA"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gift Section -->
+            <section id="gift-section" class="gift-section py-5">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="section-title">
+                                <h1 class="brideFont text-pink fw-bold">
+                                    Wedding Gift
+                                </h1>
+                                <p>
+                                    Bagi Bapak dan Ibu yang ingin mengirimkan
+                                    hadiah, dapat melalui account atau e-wallet
+                                    dibawah ini
+                                </p>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6 text-center">
+                                    <button
+                                        type="button"
+                                        class="text-center btn btn-lg btn-pink mb-4 rounded-pill"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseHadiah"
+                                    >
+                                        <i class="fas fa-fw fa-gift"></i>Kirim
+                                        Hadiah
+                                    </button>
+                                    <div class="collapse" id="collapseHadiah">
+                                        <div
+                                            class="my-4 mx-auto position-relative credit-card"
+                                        >
+                                            <img
+                                                src="img/bca-logo.png"
+                                                alt="BCA"
+                                                class="card-logo"
+                                            />
+                                            <div class="card-container">
+                                                <img
+                                                    src="img/chip-card.png"
+                                                    alt="Chip Card"
+                                                    class="card-sim"
+                                                />
+                                                <div class="card-number">
+                                                    1234 567 890
+                                                </div>
+                                            </div>
+                                            <div class="card-name mt-2">
+                                                Futaro
+                                            </div>
+                                            <a
+                                                style="cursor: pointer"
+                                                onclick="copyText(this)"
+                                                class="copy-button btn btn-light mt-3"
+                                            >
+                                                <i
+                                                    class="fas fa-fw fa-copy"
+                                                ></i>
+                                                Copy
+                                            </a>
+                                        </div>
+                                        <div
+                                            class="my-4 mx-auto position-relative credit-card"
+                                        >
+                                            <img
+                                                src="img/bni-logo.jpg"
+                                                alt="BNI"
+                                                class="card-logo"
+                                            />
+                                            <div class="card-container">
+                                                <img
+                                                    src="img/chip-card.png"
+                                                    alt="Chip Card"
+                                                    class="card-sim"
+                                                />
+                                                <div class="card-number">
+                                                    567 890 1234
+                                                </div>
+                                            </div>
+                                            <div class="card-name mt-2">
+                                                Futari
+                                            </div>
+                                            <a
+                                                style="cursor: pointer"
+                                                onclick="copyText(this)"
+                                                class="copy-button btn btn-light mt-3"
+                                            >
+                                                <i
+                                                    class="fas fa-fw fa-copy"
+                                                ></i>
+                                                Copy
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RSVP Section -->
+            <section id="rsvp-section" class="rsvp-section section-bg py-5">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="section-title text-center">
+                                <h1 class="text-pink brideFont fw-bold">
+                                    RSVP
+                                </h1>
+                                <p>
+                                    Isi Form dibawah ini untuk melakukan
+                                    konfirmasi kehadiran Anda
+                                </p>
+                            </div>
+                            <form
+                                action="https://script.google.com/macros/s/AKfycbzSs8mTzEUpgYawAvYFqkDDs7-zezBgVGTqyvBUeyrlWNCjc3STlK532XwpC2LtlKbWmg/exec"
+                                method="POST"
+                                id="rsvp-form"
+                                class="row row-cols-md-auto g-3 align-items-center justify-content-center"
+                            >
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="nama">Nama</label>
+                                        <input
+                                            type="text"
+                                            id="nama"
+                                            name="nama"
+                                            class="form-control"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="jumlah">Jumlah</label>
+                                        <input
+                                            type="number"
+                                            id="jumlah"
+                                            name="jumlah"
+                                            class="form-control"
+                                            required
+                                            min="1"
+                                            max="5"
+                                            length="1"
+                                            value="1"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="status">Status</label>
+                                        <select
+                                            name="status"
+                                            id="status"
+                                            class="form-select"
+                                            required
+                                        >
+                                            <option value="0">
+                                                ---Pilih Salah Satu---
+                                            </option>
+                                            <option value="Hadir">Hadir</option>
+                                            <option value="Tidak Hadir">
+                                                Tidak Hadir
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <div class="mt-3">
+                                        <button
+                                            type="submit"
+                                            class="btn btn-kirim"
+                                        >
+                                            <i
+                                                class="fas fa-fw fa-paper-plane"
+                                            ></i>
+                                            Kirim
+                                        </button>
+                                    </div>
+                                </div>
+
                                 <a
-                                    href="https://maps.app.goo.gl/5awDFq41DrDwrN4a6"
+                                    href="https://docs.google.com/spreadsheets/d/1zRuW3hfOffcU3YRg4km3ro0R-Hkh52NXihGKW31ABiI/edit?usp=sharing"
                                     target="_blank"
                                     class="btn btn-lg btn-pink rounded-pill mb-4"
                                 >
-                                    <i class="fas fa-fw fa-location-dot"></i>
-                                    Open in Google Maps</a
+                                    Klik Disini Jika kamu ingin melihat Form
+                                    Sheets nya</a
                                 >
-                                <iframe
-                                    class="mb-4 mb-lg-0 border-pink"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.209323456929!2d115.23391660000001!3d-8.6716335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd240f5b0baad2f%3A0xf67150ab4e009a2c!2sBajra%20Sandhi%20Monument!5e0!3m2!1sen!2sid!4v1758186033247!5m2!1sen!2sid"
-                                    width="600"
-                                    height="450"
-                                    allowfullscreen=""
-                                    loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"
-                                ></iframe>
+                            </form>
+
+                            <div class="row mt-5">
+                                <div class="col-lg-12"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Love Story Section -->
-        <section id="love-story-section" class="love-story-section py-5">
-            <div
-                class="container"
+            <!-- Akhir Section -->
+            <section
+                id="penutup-section"
+                class="penutup-section py-5"
                 data-aos="fade-up"
                 data-aos-easing="linear"
                 data-aos-duration="1500"
             >
-                <div class="section-title">
-                    <h1 class="text-pink brideFont fw-bold">Love Story</h1>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg">
-                        <ul class="timeline">
-                            <li
-                                data-aos="fade-right"
-                                data-aos-easing="linear"
-                                data-aos-duration="1500"
-                            >
-                                <div
-                                    class="timeline-badge"
-                                    style="
-                                        background-image: url('bride/Chapter1.png');
-                                    "
-                                ></div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h3 class="timeline-title">
-                                            First Meet
-                                        </h3>
-                                        <span class="timeline-date"
-                                            >15 Mei 2023</span
-                                        >
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>
-                                            Di Sebuah Cerita ini Lorem ipsum
-                                            dolor sit, amet consectetur
-                                            adipisicing elit. Impedit
-                                            accusantium nesciunt facere veniam!
-                                            Corporis, assumenda.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- Cerita 2 -->
-                            <li
-                                class="timeline-inverted"
-                                data-aos="fade-left"
-                                data-aos-easing="linear"
-                                data-aos-duration="1500"
-                            >
-                                <div
-                                    class="timeline-badge"
-                                    style="
-                                        background-image: url('bride/Chapter2.png');
-                                    "
-                                ></div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h3 class="timeline-title">
-                                            Second Meet
-                                        </h3>
-                                        <span class="timeline-date"
-                                            >29 Mei 2023</span
-                                        >
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>
-                                            Di Sebuah Cerita ini Lorem ipsum
-                                            dolor sit, amet consectetur
-                                            adipisicing elit. Impedit
-                                            accusantium nesciunt facere veniam!
-                                            Corporis, assumenda.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li
-                                data-aos="fade-right"
-                                data-aos-easing="linear"
-                                data-aos-duration="1500"
-                            >
-                                <div
-                                    class="timeline-badge"
-                                    style="
-                                        background-image: url('bride/Chapter3.png');
-                                    "
-                                ></div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h3 class="timeline-title">
-                                            Third Meet
-                                        </h3>
-                                        <span class="timeline-date"
-                                            >15 Mei 2023</span
-                                        >
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>
-                                            Di Sebuah Cerita ini Lorem ipsum
-                                            dolor sit, amet consectetur
-                                            adipisicing elit. Impedit
-                                            accusantium nesciunt facere veniam!
-                                            Corporis, assumenda.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li
-                                class="timeline-inverted"
-                                data-aos="fade-left"
-                                data-aos-easing="linear"
-                                data-aos-duration="1500"
-                            >
-                                <div
-                                    class="timeline-badge"
-                                    style="
-                                        background-image: url('bride/Chapter1.png');
-                                    "
-                                ></div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h3 class="timeline-title">
-                                            Lovely Meet
-                                        </h3>
-                                        <span class="timeline-date"
-                                            >19 Juli 2023</span
-                                        >
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>
-                                            Di Sebuah Cerita ini Lorem ipsum
-                                            dolor sit, amet consectetur
-                                            adipisicing elit. Impedit
-                                            accusantium nesciunt facere veniam!
-                                            Corporis, assumenda.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li
-                                data-aos="fade-right"
-                                data-aos-easing="linear"
-                                data-aos-duration="1500"
-                            >
-                                <div
-                                    class="timeline-badge"
-                                    style="
-                                        background-image: url('bride/Chapter2.png');
-                                    "
-                                ></div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h3 class="timeline-title">
-                                            Third Meet
-                                        </h3>
-                                        <span class="timeline-date"
-                                            >15 Mei 2023</span
-                                        >
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>
-                                            Di Sebuah Cerita ini Lorem ipsum
-                                            dolor sit, amet consectetur
-                                            adipisicing elit. Impedit
-                                            accusantium nesciunt facere veniam!
-                                            Corporis, assumenda.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Gallery Section -->
-        <section id="gallery-section" class="gallery-section py-4 section-bg">
-            <div
-                class="container"
-                data-aos="fade-up"
-                data-aos-easing="linear"
-                data-aos-duration="1500"
-            >
-                <div class="section-title">
-                    <h1 class="brideFont text-pink fw-bold">Gallery</h1>
-                </div>
-                <div class="row" data-masonry="{'percentPosition': true}">
-                    <div class="col-sm-6 col-lg-4 mb-4">
-                        <a
-                            href="bride/gallery/g1.png"
-                            data-lightbox="Our Gallery"
-                            class="text-decoration-none"
-                        >
-                            <img
-                                src="bride/gallery/g1.png"
-                                alt="Our Gallery"
-                                class="card-img border-pink"
-                            />
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 mb-4">
-                        <a
-                            href="bride/gallery/g2.png"
-                            data-lightbox="Our Gallery"
-                            class="text-decoration-none"
-                        >
-                            <img
-                                src="bride/gallery/g2.png"
-                                alt="Our Gallery"
-                                class="card-img border-pink"
-                            />
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 mb-4">
-                        <a
-                            href="bride/gallery/g3.png"
-                            data-lightbox="Our Gallery"
-                            class="text-decoration-none"
-                        >
-                            <img
-                                src="bride/gallery/g3.png"
-                                alt="Our Gallery"
-                                class="card-img border-pink"
-                            />
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 mb-4">
-                        <a
-                            href="bride/gallery/g4.png"
-                            data-lightbox="Our Gallery"
-                            class="text-decoration-none"
-                        >
-                            <img
-                                src="bride/gallery/g4.png"
-                                alt="Our Gallery"
-                                class="card-img border-pink"
-                            />
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 mb-4">
-                        <a
-                            href="bride/gallery/g5.png"
-                            data-lightbox="Our Gallery"
-                            class="text-decoration-none"
-                        >
-                            <img
-                                src="bride/gallery/g5.png"
-                                alt="Our Gallery"
-                                class="card-img border-pink"
-                            />
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 mb-4">
-                        <a
-                            href="bride/gallery/g6.png"
-                            data-lightbox="Our Gallery"
-                            class="text-decoration-none"
-                        >
-                            <img
-                                src="bride/gallery/g6.png"
-                                alt="Our Gallery"
-                                class="card-img border-pink"
-                            />
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 mb-4">
-                        <a
-                            href="bride/gallery/g7.png"
-                            data-lightbox="Our Gallery"
-                            class="text-decoration-none"
-                        >
-                            <img
-                                src="bride/gallery/g7.png"
-                                alt="Our Gallery"
-                                class="card-img border-pink"
-                            />
-                        </a>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center">
-                        <iframe
-                            class="border-pink"
-                            width="100%"
-                            height="500"
-                            src="https://www.youtube.com/embed/BYEXCPFfoPM?si=KrF8Z4pqdyREzwNA"
-                            title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            allowfullscreen
-                        ></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Gift Section -->
-        <section id="gift-section" class="gift-section py-5">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="section-title">
-                            <h1 class="brideFont text-pink fw-bold">
-                                Wedding Gift
-                            </h1>
-                            <p>
-                                Bagi Bapak dan Ibu yang ingin mengirimkan
-                                hadiah, dapat melalui account atau e-wallet
-                                dibawah ini
-                            </p>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-lg-6 text-center">
-                                <button
-                                    type="button"
-                                    class="text-center btn btn-lg btn-pink mb-4 rounded-pill"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#collapseHadiah"
-                                >
-                                    <i class="fas fa-fw fa-gift"></i>Kirim
-                                    Hadiah
-                                </button>
-                                <div class="collapse" id="collapseHadiah">
-                                    <div
-                                        class="my-4 mx-auto position-relative credit-card"
-                                    >
-                                        <img
-                                            src="img/bca-logo.png"
-                                            alt="BCA"
-                                            class="card-logo"
-                                        />
-                                        <div class="card-container">
-                                            <img
-                                                src="img/chip-card.png"
-                                                alt="Chip Card"
-                                                class="card-sim"
-                                            />
-                                            <div class="card-number">
-                                                1234 567 890
-                                            </div>
-                                        </div>
-                                        <div class="card-name mt-2">Futaro</div>
-                                        <a
-                                            style="cursor: pointer"
-                                            onclick="copyText(this)"
-                                            class="copy-button btn btn-light mt-3"
-                                        >
-                                            <i class="fas fa-fw fa-copy"></i>
-                                            Copy
-                                        </a>
-                                    </div>
-                                    <div
-                                        class="my-4 mx-auto position-relative credit-card"
-                                    >
-                                        <img
-                                            src="img/bni-logo.jpg"
-                                            alt="BNI"
-                                            class="card-logo"
-                                        />
-                                        <div class="card-container">
-                                            <img
-                                                src="img/chip-card.png"
-                                                alt="Chip Card"
-                                                class="card-sim"
-                                            />
-                                            <div class="card-number">
-                                                567 890 1234
-                                            </div>
-                                        </div>
-                                        <div class="card-name mt-2">Futari</div>
-                                        <a
-                                            style="cursor: pointer"
-                                            onclick="copyText(this)"
-                                            class="copy-button btn btn-light mt-3"
-                                        >
-                                            <i class="fas fa-fw fa-copy"></i>
-                                            Copy
-                                        </a>
-                                    </div>
-                                </div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="section-title text-center">
+                                <h1 class="text-pink brideFont fw-bold">
+                                    Terima Kasih!
+                                </h1>
+                                <p>
+                                    Merupakan suatu kebahagian bagi kami, jika
+                                    bapak dan ibu berkenan hadir dan memberikan
+                                    doa restu kepada kami
+                                </p>
+                                <h5 class="my-3">KAMI YANG BERBAHAGIA</h5>
+                                <h1 class="brideFont">Futaro and Futari</h1>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- RSVP Section -->
-        <section id="rsvp-section" class="rsvp-section section-bg py-5">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="section-title text-center">
-                            <h1 class="text-pink brideFont fw-bold">RSVP</h1>
-                            <p>
-                                Isi Form dibawah ini untuk melakukan konfirmasi
-                                kehadiran Anda
-                            </p>
+            <!-- Footer -->
+            <footer id="footer" class="mb-5 pb-5">
+                <div class="container py-5 text-center position-relative">
+                    <div class="row">
+                        <div class="col-12 my-3">
+                            <a
+                                href="#"
+                                class="text-decoration-none text-pink fw-bold"
+                                >&copy; 2025. Made with Love by Dekwid</a
+                            >
                         </div>
-                        <form
-                            action="https://script.google.com/macros/s/AKfycbzSs8mTzEUpgYawAvYFqkDDs7-zezBgVGTqyvBUeyrlWNCjc3STlK532XwpC2LtlKbWmg/exec"
-                            method="POST"
-                            id="rsvp-form"
-                            class="row row-cols-md-auto g-3 align-items-center justify-content-center"
-                        >
-                            <div class="col-12">
-                                <div class="mb-3">
-                                    <label for="nama">Nama</label>
-                                    <input
-                                        type="text"
-                                        id="nama"
-                                        name="nama"
-                                        class="form-control"
-                                        required
-                                    />
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="mb-3">
-                                    <label for="jumlah">Jumlah</label>
-                                    <input
-                                        type="number"
-                                        id="jumlah"
-                                        name="jumlah"
-                                        class="form-control"
-                                        required
-                                        min="1"
-                                        max="5"
-                                        length="1"
-                                        value="1"
-                                    />
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="mb-3">
-                                    <label for="status">Status</label>
-                                    <select
-                                        name="status"
-                                        id="status"
-                                        class="form-select"
-                                        required
-                                    >
-                                        <option value="0">
-                                            ---Pilih Salah Satu---
-                                        </option>
-                                        <option value="Hadir">Hadir</option>
-                                        <option value="Tidak Hadir">
-                                            Tidak Hadir
-                                        </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-12 mt-3">
-                                <div class="mt-3">
-                                    <button type="submit" class="btn btn-kirim">
-                                        <i class="fas fa-fw fa-paper-plane"></i>
-                                        Kirim
-                                    </button>
-                                </div>
-                            </div>
-
-                                                    <a
-                            href="https://docs.google.com/spreadsheets/d/1zRuW3hfOffcU3YRg4km3ro0R-Hkh52NXihGKW31ABiI/edit?usp=sharing"
-                            target="_blank"
-                            class="btn btn-lg btn-pink rounded-pill mb-4"
-                        >
-                            Klik Disini Jika kamu ingin melihat Form Sheets
-                            nya</a
-                        >
-                        </form>
-
-                        <div class="row mt-5">
-                            <div class="col-lg-12"></div>
+                        <div class="col-12 my-3">
+                            <a href="#" class="text-pink"
+                                ><i class="fas fa-fw fa-arrow-up"></i>Back To
+                                Top</a
+                            >
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </footer>
+        </div>
 
         <!-- Jquery3 -->
         <script
